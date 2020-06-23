@@ -18,7 +18,7 @@ describe('OmDb API', () => {
     });
     it('should return status code 404 not found', function (done) {
         chai.request(app)
-            .post('/ps4')
+            .post('/ps5b')
             .set('content-type', 'application/json')
             .send({movietitle: 'notamovie'})
             .end((err, response) => {
@@ -28,7 +28,7 @@ describe('OmDb API', () => {
     });
     it('should have img src in html', function (done) {
         chai.request(app)
-            .post('/ps4')
+            .post('/ps5b')
             .set('content-type', 'application/json')
             .send({movietitle: 'Spirited Away'})
             .end((err, response) => {

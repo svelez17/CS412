@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('ps4:server');
+var debug = require('debug')('ps5b:server');
 var http = require('http');
 
 /**
