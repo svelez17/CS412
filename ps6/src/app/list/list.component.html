@@ -1,0 +1,16 @@
+<div name="list">
+  <p>Click on a title to learn more:</p>
+  <ul *ngFor="let movie of moviedata">
+
+    <li (click)="showMoreInfo(movie.title)">{{movie.title}}</li>
+
+  </ul>
+</div>
+<div name="details" *ngIf="movieInfo">
+  <h2>{{movieInfo.title}}</h2>
+  <img src="{{movieInfo.poster}}">
+  <p>Year: {{movieInfo.year}}</p>
+  <p>Rated: {{movieInfo.rated}}</p>
+  <p>Director: {{movieInfo.director}}</p>
+  <p>Plot: {{movieInfo.plot}}</p>
+</div>
