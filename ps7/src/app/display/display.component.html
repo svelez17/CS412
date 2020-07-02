@@ -1,0 +1,15 @@
+<div name="display" *ngIf="movieInfo">
+  <h2>{{movieInfo.Title}}</h2>
+  <img src="{{movieInfo.Poster}}">
+  <p>Year: {{movieInfo.Year}}</p>
+  <p>Rated: {{movieInfo.Rated}}</p>
+  <p>Director: {{movieInfo.Director}}</p>
+  <p>Plot: {{movieInfo.Plot}}</p>
+  <p>{{movieInfo.API}}</p>
+
+  <h3>Ratings</h3>
+  <ul *ngFor="let rating of movieInfo.Ratings">
+    <p>{{rating.Source}}: {{rating.Value}}</p>
+  </ul>
+
+</div>

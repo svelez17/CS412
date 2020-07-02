@@ -1,0 +1,11 @@
+<h1>Movie Search</h1>
+
+<div name="search">
+  <p>Search for any movie:</p>
+
+  <input [formControl]="movieControl">
+  <button (click)="getMovie()" type="submit" [disabled]="movieControl.invalid">Search</button>
+
+</div>
+
+<app-display [movieInfo]="movieInfo"></app-display>
